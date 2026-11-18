@@ -1,20 +1,58 @@
 
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import "./Navbar.css";
 
 export function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const links = [
+    { href: "/", label: "Početna" },
+    { href: "/zastita-na-radu", label: "Zaštita na radu" },
+    {
+      href: "/zastita-zivotne-sredine",
+      label: "Zaštita životne sredine",
+    },
+    { href: "/zastita-od-pozara", label: "Zaštita od požara" },
+    { href: "/rjesenja-i-licence", label: "Rješenja i licence" },
+  ];
+
   return (
-    <header className="border-b border-gray-200 bg-white">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link href="/" className="text-2xl font-bold text-[#183D32]">
-          ZAEKO
+    <header className="zaeko-header">
+      <nav className="zaeko-nav">
+        <Link href="/" className="zaeko-brand">
+          <span className="zaeko-logo" aria-hidden="true">
+            🌍
+          </span>
+
+          <span className="zaeko-brand-text">
+            <strong>ZAEKO</strong>
+            <small>Zaštita • Ekologija • Projektovanje</small>
+          </span>
         </Link>
 
-        <div className="flex items-center gap-8 text-sm font-medium text-gray-700">
-          <Link href="/">Početna</Link>
-          <Link href="/o-nama">O nama</Link>
-          <Link href="/usluge">Usluge</Link>
-          <Link href="/reference">Reference</Link>
-          <Link href="/kontakt">Kontakt</Link>
+        <button
+          type="button"
+          className="zaeko-menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Otvori navigaciju"
+          aria-expanded={menuOpen}
+        >
+          ☰
+        </button>
+
+        <div className={`zaeko-links ${menuOpen ? "open" : ""}`}>
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
       </nav>
     </header>
