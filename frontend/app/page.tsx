@@ -121,44 +121,89 @@ export default function Home() {
 </section>
 
 
-      <section className={styles.services}>
-        <p className={styles.sectionLabel}>
-          Naše djelatnosti
+      
+<section className={styles.services}>
+  <div className={styles.servicesHeading}>
+    <p className={styles.sectionLabel}>NAŠE DJELATNOSTI</p>
+    <h2 className={styles.sectionTitle}>
+      Kompletna podrška iz oblasti zaštite
+    </h2>
+  </div>
+
+  <div className={styles.cards}>
+    <article className={styles.card}>
+      <div className={styles.cardImage}>
+        <Image
+          src="/images/zastita-na-radu.png"
+          alt="Zaštitni šljem i oprema za rad"
+          fill
+          sizes="(max-width: 800px) 100vw, 33vw"
+          className={styles.cardPhoto}
+        />
+      </div>
+
+      <div className={styles.cardBody}>
+        <div className={styles.cardIcon}>🛡️</div>
+        <h3>Zaštita na radu</h3>
+        <p>
+          Stručne usluge i rješenja za sigurno radno
+          okruženje.
         </p>
+        <Link href="/zastita-na-radu" className={styles.cardLink}>
+          Saznajte više <span aria-hidden="true">→</span>
+        </Link>
+      </div>
+    </article>
 
-        <h2 className={styles.sectionTitle}>
-          Oblasti u kojima pružamo stručnu podršku
-        </h2>
+    <article className={styles.card}>
+      <div className={styles.cardImage}>
+        <Image
+          src="/images/zastita-zivotne-sredine.png"
+          alt="Mlada biljka kao simbol očuvanja prirode"
+          fill
+          sizes="(max-width: 800px) 100vw, 33vw"
+          className={styles.cardPhoto}
+        />
+      </div>
 
-        <div className={styles.cards}>
-          <article className={styles.card}>
-            <div className={styles.cardIcon}>🦺</div>
-            <h3>Zaštita na radu</h3>
-            <p>
-              Stručna podrška u oblasti bezbjednosti i
-              zdravlja na radu.
-            </p>
-          </article>
+      <div className={styles.cardBody}>
+        <div className={styles.cardIcon}>🌿</div>
+        <h3>Zaštita životne sredine</h3>
+        <p>
+          Očuvanje prirode i održivo poslovanje.
+        </p>
+        <Link href="/zastita-zivotne-sredine" className={styles.cardLink}>
+          Saznajte više <span aria-hidden="true">→</span>
+        </Link>
+      </div>
+    </article>
 
-          <article className={styles.card}>
-            <div className={styles.cardIcon}>🌿</div>
-            <h3>Zaštita životne sredine</h3>
-            <p>
-              Odgovorna rješenja usmjerena na očuvanje
-              prirodnih resursa i životne sredine.
-            </p>
-          </article>
+    <article className={styles.card}>
+      <div className={styles.cardImage}>
+        <Image
+          src="/images/zastita-od-pozara-nova.png"
+          alt="Protivpožarni aparat"
+          fill
+          sizes="(max-width: 800px) 100vw, 33vw"
+          className={styles.cardPhoto}
+        />
+      </div>
 
-          <article className={styles.card}>
-            <div className={styles.cardIcon}>🔥</div>
-            <h3>Zaštita od požara</h3>
-            <p>
-              Stručne usluge i preventivne mjere u
-              oblasti zaštite od požara.
-            </p>
-          </article>
-        </div>
-      </section>
+      <div className={styles.cardBody}>
+        <div className={styles.cardIcon}>🔥</div>
+        <h3>Zaštita od požara</h3>
+        <p>
+          Prevencija i zaštita od požara po najvišim
+          standardima.
+        </p>
+        <Link href="/zastita-od-pozara" className={styles.cardLink}>
+          Saznajte više <span aria-hidden="true">→</span>
+        </Link>
+      </div>
+    </article>
+  </div>
+</section>
+
     </main>
   );
 }
