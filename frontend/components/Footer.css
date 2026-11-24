@@ -1,0 +1,164 @@
+.footer {
+  background: linear-gradient(
+    120deg,
+    #10382b,
+    #194b37
+  );
+  color: #d3e8d7;
+  padding: 65px 6% 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+  padding-bottom: 45px;
+}
+
+/* KONTAKT */
+
+.footer-contact h2 {
+  font-size: 32px;
+  font-weight: 750;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin: 0 0 15px;
+}
+
+.footer-line {
+  width: 50px;
+  height: 2px;
+  background: #8fc39c;
+  margin-bottom: 25px;
+}
+
+.footer-contact p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+.footer-company {
+  font-weight: 600;
+  margin-bottom: 22px !important;
+}
+
+.footer-contact a {
+  color: #d3e8d7;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
+/* LOKACIJA */
+
+.footer-location h3 {
+  color: #ffffff;
+  font-size: 19px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 8px 0 15px;
+}
+
+.footer-location iframe {
+  display: block;
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 14px;
+}
+
+.footer-map-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #b7ddc5;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-map-link:hover {
+  color: #ffffff;
+}
+
+/* DONJI DIO */
+
+.footer-bottom {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  color: #b7cfc0;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .footer {
+    padding: 45px 6% 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-location iframe {
+    height: 240px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* KONTAKT INFORMACIJE I IKONICE */
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.footer-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #d3e8d7;
+}
+
+.footer-info-item svg {
+  color: #a6cbb1;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer-info-item a {
+  color: #d3e8d7;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.footer-info-item a:hover {
+  color: #ffffff;
+}
