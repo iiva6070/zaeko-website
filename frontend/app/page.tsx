@@ -46,17 +46,6 @@ export default function Home() {
             </Link>
           </div>
          </div>
-       <div className={styles.heroImage}>
-          <Image
-             src="/images/zaeko-priroda.png"
-             alt="Zeleni šumski pejzaž sa rijekom"
-            fill
-            priority
-            sizes="(max-width: 900px) 100vw, 50vw"
-            className={styles.image}
-           />
-          </div>
-
         </div>
       </section>
 

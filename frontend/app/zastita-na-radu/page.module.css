@@ -1,0 +1,83 @@
+.hero {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(18, 59, 45, 0.97) 0%,
+      rgba(18, 59, 45, 0.85) 30%,
+      rgba(18, 59, 45, 0.35) 65%,
+      rgba(18, 59, 45, 0.05) 100%
+    ),
+    url("/images/zastita-na-radu-hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.heroContent {
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.heroLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #b5d5bd;
+  margin-bottom: 16px;
+}
+
+.heroContent h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.heroLine {
+  width: 65px;
+  height: 3px;
+  background-color: #92bf99;
+  margin: 24px 0;
+}
+
+.heroContent p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #e0ede5;
+  margin: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 380px;
+    background-position: 65% center;
+  }
+
+  .heroContainer {
+    padding: 45px 24px;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+}

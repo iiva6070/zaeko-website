@@ -7,62 +7,72 @@
 
 /* HERO SEKCIJA */
 
+/* HERO SEKCIJA */
+
 .hero {
-  background: linear-gradient(
-    120deg,
-    #123b2d 0%,
-    #235b45 60%,
-    #36795b 100%
-  );
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
   color: white;
-  padding: 110px 24px;
+  padding: 70px 24px;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #123b2d 0%,
+      rgba(18, 59, 45, 0.98) 20%,
+      rgba(18, 59, 45, 0.92) 35%,
+      rgba(18, 59, 45, 0.65) 50%,
+      rgba(18, 59, 45, 0.25) 70%,
+      rgba(18, 59, 45, 0.05) 100%
+    ),
+    url("/images/zaeko-priroda.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-
 .heroContent {
+  width: 100%;
   max-width: 1450px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 65px;
 }
 
 .heroText {
+  max-width: 700px;
   min-width: 0;
 }
 
-.heroImage {
-  position: relative;
-  width: 100%;
-  height: 540px;
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
-}
-
-.image {
-  object-fit: cover;
-}
+/* RESPONSIVE HERO */
 
 @media (max-width: 900px) {
-  .heroContent {
-    grid-template-columns: 1fr;
-    gap: 45px;
+  .hero {
+    min-height: 650px;
+    padding: 80px 24px;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(18, 59, 45, 0.97) 0%,
+        rgba(18, 59, 45, 0.85) 50%,
+        rgba(18, 59, 45, 0.45) 100%
+      ),
+      url("/images/zaeko-priroda.png");
   }
 
-  .heroImage {
-    height: 400px;
+  .heroText {
+    max-width: 650px;
   }
 }
 
 @media (max-width: 500px) {
-  .heroImage {
-    height: 280px;
-    border-radius: 18px;
+  .hero {
+    min-height: 600px;
+    padding: 60px 20px;
   }
 }
-
 
 .subtitle {
   color: #b7ddc5;
