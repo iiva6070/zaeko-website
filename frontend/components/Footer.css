@@ -162,3 +162,34 @@
 .footer-info-item a:hover {
   color: #ffffff;
 }
+
+/* RADNO VRIJEME */
+
+.footerWorkingHours {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 25px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.footerWorkingHours svg {
+  color: #b7ddc5;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footerWorkingHours h4 {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.footerWorkingHours p {
+  color: #d3e8d7;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}

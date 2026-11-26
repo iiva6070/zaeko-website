@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { MapPin, Phone, Smartphone, Mail } from "lucide-react";
+import { MapPin, Phone, Smartphone, Mail,Clock,} from "lucide-react";
 
 export function Footer() {
   return (
@@ -57,6 +57,15 @@ export function Footer() {
                 zastita.ekologija.projektovanje@gmail.com
               </a>
             </div>
+
+            <div className="footerWorkingHours">
+  <Clock size={22} />
+
+  <div>
+    <h4>Radno vrijeme</h4>
+    <p>Ponedjeljak – petak: 07:00 – 15:00</p>
+  </div>
+</div>
 
           </div>
         </div>
