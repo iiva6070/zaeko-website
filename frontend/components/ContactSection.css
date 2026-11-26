@@ -1,0 +1,281 @@
+/* KONTAKT SEKCIJA */
+
+.contactSection {
+  background: #f0f2ec;
+  padding: 80px 6% 90px;
+  scroll-margin-top: 100px;
+}
+
+.contactContainer {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* NASLOV */
+
+.contactHeading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.contactLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: #43846a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.contactLabel::before,
+.contactLabel::after {
+  content: "";
+  width: 55px;
+  height: 2px;
+  background: #a8d5ae;
+}
+
+.contactHeading h2 {
+  color: #173e32;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 750;
+  margin: 0 0 18px;
+}
+
+.contactHeading p {
+  color: #53645b;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* RASPORED KARTICA */
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* KARTICA SA FORMOM */
+
+.contactFormCard {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 18px;
+  border: 1px solid #e1e8df;
+  box-shadow: 0 8px 28px rgba(17, 57, 43, 0.07);
+  min-width: 0;
+}
+
+.contactFormCard h3 {
+  color: #173e32;
+  font-size: 25px;
+  margin: 0 0 28px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.formGroup label {
+  color: #173e32;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d9e3d9;
+  border-radius: 8px;
+  background: #fafbf9;
+  color: #173e32;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #43846a;
+  box-shadow: 0 0 0 3px rgba(67, 132, 106, 0.12);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: #87958c;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.requiredNote {
+  color: #65766c;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* DUGME ZA SLANJE */
+
+.contactSubmit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 22px;
+  background: #235b45;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contactSubmit:hover {
+  background: #123b2d;
+  transform: translateY(-2px);
+}
+
+/* DIREKTAN KONTAKT */
+
+.directContactCard {
+  background: linear-gradient(
+    145deg,
+    #123b2d,
+    #235b45
+  );
+  color: white;
+  border-radius: 18px;
+  padding: 36px;
+  min-width: 0;
+  box-shadow: 0 8px 28px rgba(17, 57, 43, 0.12);
+}
+
+.directContactCard h3 {
+  color: white;
+  font-size: 25px;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+
+.directContactIntro {
+  color: #d3e8d7;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0 0 28px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contactInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.contactInfoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contactInfoItem > div:last-child {
+  min-width: 0;
+}
+
+.contactInfoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #b7ddc5;
+  flex-shrink: 0;
+}
+
+.contactInfoItem h4 {
+  color: white;
+  font-size: 15px;
+  margin: 0 0 7px;
+}
+
+.contactInfoItem p,
+.contactInfoItem a {
+  color: #d3e8d7;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contactInfoItem a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactSection {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .contactFormCard,
+  .directContactCard {
+    padding: 24px;
+  }
+
+  .contactLabel::before,
+  .contactLabel::after {
+    width: 25px;
+  }
+
+  .contactLabel {
+    letter-spacing: 2px;
+    gap: 10px;
+  }
+}

@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { Footer } from "../components/Footer";
+import { ContactModal } from "../components/ContactModal";
 
 export default function Home() {
   return (
@@ -37,13 +38,9 @@ export default function Home() {
             >
               Istražite naše usluge
             </Link>
-
-            <Link
-              href="/kontakt"
-              className={styles.secondaryButton}
-            >
-              Kontaktirajte nas
-            </Link>
+            <ContactModal
+               buttonClassName={styles.secondaryButton}
+            />
           </div>
          </div>
         </div>

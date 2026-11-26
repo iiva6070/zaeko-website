@@ -1,0 +1,179 @@
+/* MODALNI PROZOR */
+
+.contactModal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 0;
+  border: none;
+  width: min(1150px, 94vw);
+  max-width: 94vw;
+  max-height: 92dvh;
+  border-radius: 22px;
+  background: #f0f2ec;
+  overflow-y: auto;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+/* ZATAMNJENA POZADINA */
+
+.contactModal::backdrop {
+  background: rgba(10, 30, 23, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+body:has(.contactModal[open]) {
+  overflow: hidden;
+}
+
+.contactModalContent {
+  position: relative;
+}
+
+/* DUGME ZA ZATVARANJE */
+
+.contactModalClose {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+  background: #e0e9df;
+  color: #173e32;
+  cursor: pointer;
+
+  transition: background 0.2s;
+}
+
+.contactModalClose:hover {
+  background: #cbdccc;
+}
+
+/* PRILAGOĐAVANJE POSTOJEĆE FORME */
+
+.contactModal .contactSection {
+  padding: 45px 35px 35px;
+}
+
+.contactModal .contactHeading {
+  margin-bottom: 28px;
+}
+
+.contactModal .contactFormCard,
+.contactModal .directContactCard {
+  padding: 28px;
+}
+
+/* ANIMACIJA OTVARANJA */
+
+.contactModal[open] {
+  animation: modalAppear 0.25s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .contactModal {
+    width: 96vw;
+    max-width: 96vw;
+    max-height: 94dvh;
+    border-radius: 16px;
+  }
+
+  .contactModal .contactSection {
+    padding: 60px 15px 20px;
+  }
+
+  .contactModal .contactFormCard,
+  .contactModal .directContactCard {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactModal[open] {
+    animation: none;
+  }
+}
+
+/* KOMPAKTNIJI PRIKAZ NA RAČUNARU */
+
+@media (min-width: 901px) {
+  .contactModal .contactSection {
+    padding: 30px;
+  }
+
+  .contactModal .contactHeading {
+    margin-bottom: 20px;
+  }
+
+  .contactModal .contactHeading h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .contactModal .contactFormCard,
+  .contactModal .directContactCard {
+    padding: 24px;
+  }
+
+  .contactModal .contactFormCard h3 {
+    margin-bottom: 20px;
+  }
+
+  .contactModal .contactForm {
+    gap: 14px;
+  }
+
+  .contactModal .formGroup {
+    gap: 6px;
+  }
+
+  .contactModal .formGroup input,
+  .contactModal .formGroup select {
+    padding: 10px 12px;
+  }
+
+  .contactModal .formGroup textarea {
+    min-height: 90px;
+    height: 90px;
+  }
+
+  .contactModal .contactInfoList {
+    gap: 18px;
+  }
+
+  .contactModal .directContactIntro {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+  }
+}
+
+.contactModalClose {
+  position: sticky;
+  top: 12px;
+  margin-left: auto;
+  margin-right: 12px;
+  margin-bottom: -40px;
+}

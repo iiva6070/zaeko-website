@@ -493,6 +493,11 @@
   align-self: flex-start;
 }
 
-
+.secondaryButton {
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
 
 
